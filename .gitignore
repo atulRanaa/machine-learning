@@ -1,0 +1,17 @@
+# Python and Mkdocs
+site/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pyc
+env/
+.env
+
+# MacOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+*.swp

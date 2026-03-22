@@ -1,0 +1,45 @@
+/* Fix index page header clipping */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  overflow: visible;
+}
+
+/* Ensure grid cards display properly */
+.md-typeset .grid.cards {
+  overflow: visible;
+}
+
+/* Admonition styling enhancements */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 8px;
+}
+
+/* Code block improvements */
+.md-typeset pre > code {
+  border-radius: 6px;
+}
+
+/* Math display improvements — prevent horizontal overflow */
+.MathJax {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+/* Ensure math in admonitions renders properly */
+.md-typeset .admonition .MathJax,
+.md-typeset details .MathJax {
+  font-size: 0.95em;
+}
+
+/* Fix inline math vertical alignment */
+.MathJax_Display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* Tabs readability */
+.md-typeset .tabbed-labels > label {
+  font-weight: 600;
+}

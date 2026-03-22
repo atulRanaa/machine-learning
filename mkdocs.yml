@@ -1,0 +1,126 @@
+site_name: "AI & Machine Learning: Internals & Engineering"
+site_description: 'A comprehensive, deeply technical resource for understanding the internals of Artificial Intelligence, Machine Learning, and Deep Learning — from first principles to production systems.'
+site_author: 'Atul Rana'
+repo_url: https://github.com/atulRanaa/machine-learning
+
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/favicon.png
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - toc.follow
+    - toc.integrate
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - def_list
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/atulRanaa
+
+nav:
+  - Home: index.md
+  - "Part I — Foundations":
+    - "1.1 The ML Problem": machine-learning/1-foundations.md
+    - "1.2 Classical Algorithms": machine-learning/2-algorithms.md
+    - "1.3 AI Foundations": ai-engineering/chapter-1-foundations.md
+    - "1.4 Classical ML Engineering": ai-engineering/chapter-2-classical-ml.md
+  - "Part II — Deep Learning":
+    - "2.1 Deep Learning Theory": machine-learning/3-deep-learning.md
+    - "2.2 DL Architecture Internals": ai-engineering/chapter-3-deep-learning.md
+    - "2.3 Generative Models & RL": machine-learning/4-generative-rl.md
+    - "2.4 Modern Generative AI": ai-engineering/chapter-4-generative-models.md
+    - "2.5 RL & Decision Systems": ai-engineering/chapter-5-rl-systems.md
+  - "Part III — Systems & Production":
+    - "3.1 ML Systems & Infrastructure": machine-learning/5-systems-infra.md
+    - "3.2 Infrastructure at Scale": ai-engineering/chapter-6-infrastructure.md
+    - "3.3 MLOps": ai-engineering/chapter-7-mlops.md
+    - "3.4 Case Studies & Tools": ai-engineering/chapter-9-case-studies.md
+  - "Part IV — Responsibility":
+    - "4.1 Ethics & Governance": machine-learning/6-ethics-governance.md
+    - "4.2 Safety & Regulation": ai-engineering/chapter-8-ethics-safety.md
+  - "Part V — Agentic Era":
+    - "5.1 Agentic AI Systems": ai-engineering/chapter-10-agentic-ai.md
+  - "Hall of Fame": hall-of-fame.md
+  - "Tech Giants": tech-giants.md
